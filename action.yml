@@ -8,9 +8,10 @@ inputs:
   args:
     description: 'pre-commit args'
     required: false
-    default: 'run --all-files'
+    default: '--all-files'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - run
     - ${{ inputs.args}}
