@@ -18,5 +18,7 @@ runs:
   image: 'Dockerfile'
   args:
     - run
+    - -c
+    - .pre-commit-confi-ci.yaml
     - ${{ inputs.flag}}
     - ${{ inputs.files}}
