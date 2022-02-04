@@ -4,11 +4,11 @@ description: 'List of pre-commit hooks to ensure the quality of your dbt project
 branding:
   icon: 'anchor'
   color: 'blue'
-inputs:
-  args:
-    description: 'pre-commit args'
-    required: false
-    default: 'run --all-files'
+# inputs:
+#   args:
+#     description: 'pre-commit args'
+#     required: false
+#     default: 'pre-commit run --all-files'
 runs:
   using: 'docker'
   image: 'Dockerfile'
