@@ -5,13 +5,18 @@ branding:
   icon: 'anchor'
   color: 'blue'
 inputs:
-  args:
-    description: 'pre-commit args'
+  flag:
+    description: 'flag for pre-commit'
     required: false
     default: '--all-files'
+  files:
+    description: 'files to evaluate'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - run
-    - ${{ inputs.args}}
+    - ${{ inputs.flag}}
+    - ${{ inputs.files}}
