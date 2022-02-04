@@ -19,6 +19,6 @@ runs:
   args:
     - run
     - -c
-    - .pre-commit-confi-ci.yaml
+    - .pre-commit-config-ci.yaml
     - ${{ inputs.flag}}
     - ${{ inputs.files}}
